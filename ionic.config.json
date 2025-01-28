@@ -1,0 +1,7 @@
+{
+  "name": "Atomic Timer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
