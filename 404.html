@@ -24,3 +24,13 @@
 <link rel="modulepreload" href="chunk-NJZLKQXY.js"><link rel="modulepreload" href="chunk-COPWYOC5.js"><link rel="modulepreload" href="chunk-QGS6SLKV.js"><link rel="modulepreload" href="chunk-2RSFF4GF.js"><link rel="modulepreload" href="chunk-JL6LDP7Q.js"><link rel="modulepreload" href="chunk-F7XBNY6P.js"><link rel="modulepreload" href="chunk-ZSXYZYSQ.js"><link rel="modulepreload" href="chunk-5MPL5A3U.js"><link rel="modulepreload" href="chunk-NKT2XMZU.js"><link rel="modulepreload" href="chunk-4U6PRYVA.js"><script src="polyfills-4BK4MXU4.js" type="module"></script><script src="main-LHIXSJEL.js" type="module"></script></body>
 
 </html>
+
+<script>
+  (function() {
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
