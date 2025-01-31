@@ -27,6 +27,7 @@
 
 <script>
   (function() {
+    // Recupera la ruta guardada y redirige
     var redirect = sessionStorage.redirect;
     delete sessionStorage.redirect;
     if (redirect && redirect != location.href) {
