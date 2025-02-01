@@ -4,7 +4,7 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Atomic Timer</ion-list-header>
-          <ion-note>Hola {{ user }}</ion-note>
+          <ion-note>Hello {{ user }}</ion-note>
           @for (p of appPages; track p; let i = $index) {
           <ion-menu-toggle auto-hide="false">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"

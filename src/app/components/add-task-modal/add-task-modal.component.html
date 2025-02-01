@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input type="text" placeholder="Task Name" [(ngModel)]="task.name" ngDefaultControl></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input min="0" type="number" placeholder="Hours" [(ngModel)]="task.hours" ngDefaultControl></ion-input>
+    <ion-input min="0" type="number" placeholder="Minutes" [(ngModel)]="task.minutes" ngDefaultControl></ion-input>
+    <ion-input min="0" type="number" placeholder="Seconds" [(ngModel)]="task.seconds" ngDefaultControl></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="file" placeholder="Optional Image" ngDefaultControl (change)="onFileChange($event)"></ion-input>
+  </ion-item>
+</ion-content>

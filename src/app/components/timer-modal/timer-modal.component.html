@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">Close</ion-button>
+    </ion-buttons>
+    <ion-title>{{ selectedTask.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="timer-display">
+    <h1>{{ common.formatDuration(timerHours, timerMinutes, timerSeconds) }}</h1>
+  </div>
+  <ion-button expand="full" (click)="startStopTimer()">
+    {{ isTimerRunning ? 'Pause' : 'Start' }}
+  </ion-button>
+  <ion-button expand="full" (click)="resetTimer()"
+    [disabled]="!isTimerRunning && timerHours === 0 && timerMinutes === 0 && timerSeconds === 0">
+    Reset
+  </ion-button>
+</ion-content>

@@ -11,7 +11,7 @@ import { homeSharp } from 'ionicons/icons';
   imports: [RouterLink, RouterLinkActive, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet],
 })
 export class AppComponent {
-  public user: string = 'Usuario';
+  public user: string = 'User';
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home' }
   ];
