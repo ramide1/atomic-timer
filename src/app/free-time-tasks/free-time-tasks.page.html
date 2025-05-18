@@ -3,12 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Home</ion-title>
+    <ion-title>Free Time Tasks</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
   <div *ngIf="taskList.length === 0" id="container">
-    <strong class="capitalize">First add a task</strong>
+    <strong class="capitalize">First add a free time task</strong>
   </div>
   <ion-list *ngIf="taskList.length > 0">
     <ion-item *ngFor="let task of taskList" button (click)="openTimerModal(task)">

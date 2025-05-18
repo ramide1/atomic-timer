@@ -16,6 +16,7 @@ export class AddTaskModalComponent {
     minutes: '' as number | string,
     seconds: '' as number | string,
     image: '' as string,
+    status: false as boolean
   };
 
   constructor(private modalCtrl: ModalController, private alert: AlertService) { }
@@ -31,7 +32,7 @@ export class AddTaskModalComponent {
       this.alert.presentAlert('Duration is required.', 'Error');
     } else {
       this.modalCtrl.dismiss(this.task, 'confirm');
-      this.task = { name: '', hours: '', minutes: '', seconds: '', image: '' };
+      this.task = { name: '', hours: '', minutes: '', seconds: '', image: '', status: false };
     }
   }
 

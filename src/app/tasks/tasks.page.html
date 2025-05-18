@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tasks</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div *ngIf="taskList.length === 0" id="container">
+    <strong class="capitalize">First add a task</strong>
+  </div>
+  <ion-list *ngIf="taskList.length > 0">
+    <ion-item *ngFor="let task of taskList" button (click)="openTimerModal(task)">
+      <ion-label>
+        <h2>{{ task.name }}</h2>
+        <p>Duration: {{ common.formatDuration(task.hours, task.minutes, task.seconds) }}</p>
+      </ion-label>
+      <img *ngIf="task.image" [src]="task.image" alt="Task Image" style="max-width: 100px; max-height: 100px;" />
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openAddTaskModal()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

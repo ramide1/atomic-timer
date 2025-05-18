@@ -11,12 +11,12 @@ import { TimerModalComponent } from '../components/timer-modal/timer-modal.compo
 import { CommonService } from '../services/common.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-tasks',
+  templateUrl: './tasks.page.html',
+  styleUrls: ['./tasks.page.scss'],
   imports: [IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonFab, IonFabButton, IonIcon, IonItem, IonLabel, IonList, CommonModule, FormsModule],
 })
-export class HomePage {
+export class TasksPage {
   taskList: any[] = [];
 
   constructor(private storage: StorageService, private alert: AlertService, private modalCtrl: ModalController, public common: CommonService) {
