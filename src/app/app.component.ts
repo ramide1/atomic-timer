@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { paperPlaneOutline, paperPlaneSharp, gameControllerSharp, gameControllerOutline } from 'ionicons/icons';
+import { paperPlaneOutline, paperPlaneSharp } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +13,9 @@ import { paperPlaneOutline, paperPlaneSharp, gameControllerSharp, gameController
 export class AppComponent {
   public user: string = 'User';
   public appPages = [
-    { title: 'Tasks', url: '/tasks', icon: 'paper-plane' },
-    { title: 'Free Time Tasks', url: '/free-time-tasks', icon: 'game-controller' }
+    { title: 'Tasks', url: '/tasks', icon: 'paper-plane' }
   ];
   constructor() {
-    addIcons({ paperPlaneOutline, paperPlaneSharp, gameControllerSharp, gameControllerOutline });
+    addIcons({ paperPlaneOutline, paperPlaneSharp });
   }
 }
