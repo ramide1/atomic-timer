@@ -15,6 +15,7 @@ export class AddTaskModalComponent {
     hours: '' as number | string,
     minutes: '' as number | string,
     seconds: '' as number | string,
+    sets: '' as number | string,
     image: '' as string,
     status: false as boolean
   };
@@ -32,7 +33,7 @@ export class AddTaskModalComponent {
       this.alert.presentAlert('Duration is required.', 'Error');
     } else {
       this.modalCtrl.dismiss(this.task, 'confirm');
-      this.task = { name: '', hours: '', minutes: '', seconds: '', image: '', status: false };
+      this.task = { name: '', hours: '', minutes: '', seconds: '', sets: '', image: '', status: false };
     }
   }
 

@@ -18,6 +18,9 @@
     <ion-input min="0" type="number" placeholder="Seconds" [(ngModel)]="task.seconds" ngDefaultControl></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="file" placeholder="Optional Image" ngDefaultControl (change)="onFileChange($event)"></ion-input>
+    <ion-input min="0" type="number" placeholder="Sets" [(ngModel)]="task.sets" ngDefaultControl></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="file" label="Image" ngDefaultControl (change)="onFileChange($event)"></ion-input>
   </ion-item>
 </ion-content>

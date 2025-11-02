@@ -13,6 +13,7 @@ export class TimerModalComponent {
   timerHours: number = 0;
   timerMinutes: number = 0;
   timerSeconds: number = 0;
+  timerSets: number = 1;
   isTimerRunning: boolean = false;
   timerInterval: any = null;
 
@@ -45,6 +46,11 @@ export class TimerModalComponent {
       this.timerHours--;
       this.timerMinutes = 59;
       this.timerSeconds = 59;
+    } else if (this.timerSets > 1) {
+      this.timerSets--;
+      this.timerHours = this.selectedTask.hours || 0;
+      this.timerMinutes = this.selectedTask.minutes || 0;
+      this.timerSeconds = this.selectedTask.seconds || 0;
     } else {
       clearInterval(this.timerInterval);
       this.isTimerRunning = false;
@@ -56,5 +62,6 @@ export class TimerModalComponent {
     this.timerHours = this.selectedTask.hours || 0;
     this.timerMinutes = this.selectedTask.minutes || 0;
     this.timerSeconds = this.selectedTask.seconds || 0;
+    this.timerSets = this.selectedTask.sets || 1;
   }
 }
